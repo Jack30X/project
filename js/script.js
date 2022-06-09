@@ -1,17 +1,19 @@
-"use sctrict"
+const numberOfFilms = prompt('скільки філмів ви вже подивились?', '');
 
-//alert('Hello');
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-//const result = confirm("Are you here?");
-//console.log(result);
+const a = prompt('Один із останніх переглянутих фільмів?', ''),
+    b = prompt('Наскілки оціните його?', ''),
+    c = prompt('Один із останніх переглянутих фільмів?', ''),
+    d = prompt('Наскілки оціните його?', '');
 
-// const answer = prompt("Вам є 18?", "18");
-// console.log(answer + 5);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-const answers = [];
-
-answers[0] = prompt('Як вас імя?', '');
-answers[1] = prompt('Як вас фамілія?', '');
-answers[2] = prompt('Скільки вам років?', '');
-
-document.write(answers);
+console.log(personalMovieDB);
